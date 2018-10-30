@@ -29,10 +29,5 @@
         {
             return await this.dataService.GetAllData();
         }
-
-        [HttpPost("results/submit")]
-        public void Post([FromBody]string value)
-        {
-        }
     }
 }

@@ -20,7 +20,11 @@
         {
             IEnumerable<Person> people = response.Data;
 
+            Log.Info("Calculating...");
+
             var result = this.ConvertToCalculatedViewModel(people);
+
+            Log.Info("Successly for calculated the return value data");
 
             return result;
         }
@@ -34,14 +38,16 @@
                 var content = response.Content;
                 var result = await content.ReadAsStringAsync();
 
-                var data = JsonConvert.DeserializeObject<APIResponse>(result);
+                var externalApiResonse = JsonConvert.DeserializeObject<APIResponse>(result);
 
-                if (data == null)
+                Log.InfoFormat($"Found {externalApiResonse.Data.Count()}");
+
+                if (externalApiResonse == null)
                 {
                     Log.WarnFormat("No data found");
                 }
 
-                return data;
+                return externalApiResonse;
             }
             catch (Exception ex)
             {
