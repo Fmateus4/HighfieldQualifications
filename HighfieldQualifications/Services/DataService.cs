@@ -13,7 +13,6 @@
     public class DataService : IDataService
     {
         private const int AddToAge = 20;
-        private const string DataUrl = @"http://recruitment.highfieldqualifications.com/api/gettest";
         private static readonly ILog Log = LogManager.GetLogger(typeof(DataService));
 
         public ReturnData CalculateReturnData(APIResponse response)
@@ -34,7 +33,7 @@
             try
             {
                 var client = new HttpClient();
-                var response = await client.GetAsync(DataUrl);
+                var response = await client.GetAsync(Constants.DataUrl);
                 var content = response.Content;
                 var result = await content.ReadAsStringAsync();
 
@@ -57,7 +56,7 @@
             }
         }
 
-        private static int CalculateAge(DateTimeOffset birthDate, DateTimeOffset now)
+        public static int CalculateAge(DateTimeOffset birthDate, DateTimeOffset now)
         {
             var age = now.Year - birthDate.Year;
 

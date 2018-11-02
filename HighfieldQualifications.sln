@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighfieldQualifications", "HighfieldQualifications\HighfieldQualifications.csproj", "{379B38C3-F053-44B7-8489-D0F8C7B8BAFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighfieldQualifications.Contracts", "HighfieldQualifications.Contracts\HighfieldQualifications.Contracts.csproj", "{CDDE066F-B11F-43D9-B14F-57F60EB02766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighfieldQualifications.Contracts", "HighfieldQualifications.Contracts\HighfieldQualifications.Contracts.csproj", "{CDDE066F-B11F-43D9-B14F-57F60EB02766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighfieldQualifications.Test", "HighfieldQualifications.Test\HighfieldQualifications.Test.csproj", "{4825FB75-3A21-48DD-B4EF-15C1395ACC4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CDDE066F-B11F-43D9-B14F-57F60EB02766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDDE066F-B11F-43D9-B14F-57F60EB02766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDDE066F-B11F-43D9-B14F-57F60EB02766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4825FB75-3A21-48DD-B4EF-15C1395ACC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4825FB75-3A21-48DD-B4EF-15C1395ACC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4825FB75-3A21-48DD-B4EF-15C1395ACC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4825FB75-3A21-48DD-B4EF-15C1395ACC4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

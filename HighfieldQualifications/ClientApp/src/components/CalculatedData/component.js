@@ -24,14 +24,12 @@ class Calculate extends Component {
     }
 
     submitTestBtnHandler(e) {
-        const loading = store.getState().calculatedDataReducer.isLoading;
-
-
+        const loading = store.getState().calculatedDataStore.isLoading;
 
         if (loading === false) {
 
-            let ages = [...store.getState().calculatedDataReducer.agePlusTwenty];
-            let colours = [...store.getState().calculatedDataReducer.topColours];
+            let ages = [...store.getState().calculatedDataStore.agePlusTwenty];
+            let colours = [...store.getState().calculatedDataStore.topColours];
 
             let objectToPost = {
                 agePlusTwenty: ages,
@@ -125,8 +123,8 @@ function renderLoading(props) {
 
 function mapStateToProps(state) {
     return {
-        agePlusTwenty: state.calculatedDataReducer.agePlusTwenty,
-        topColours: state.calculatedDataReducer.topColours,
+        agePlusTwenty: state.calculatedDataStore.agePlusTwenty,
+        topColours: state.calculatedDataStore.topColours,
         isLoading: false
     };
 }

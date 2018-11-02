@@ -5,7 +5,7 @@ import * as CalculatedData from '../components/CalculatedData/store';
 
 export default function configureStore(history, initialState) {
   const reducers = {
-      calculatedDataReducer: CalculatedData.reducer
+      calculatedDataStore: CalculatedData.reducer
   };
 
   const middleware = [
